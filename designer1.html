@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Design – Customize Your Invitation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-pink-600">Dream Design</h1>
+      <nav class="space-x-6 text-gray-700">
+        <a href="index.html" class="hover:text-pink-600">Home</a>
+        <a href="designer.html" class="hover:text-pink-600 font-semibold">Designer</a>
+        <a href="videos.html" class="hover:text-pink-600">Videos</a>
+        <a href="pricing.html" class="hover:text-pink-600">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Customizer Section -->
+  <section class="pt-32 pb-16 px-4 md:px-20 bg-gradient-to-br from-white to-pink-50" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center text-pink-700 mb-6">Create Your Wedding Invitation</h2>
+    
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Customization Form -->
+      <div class="bg-white p-6 shadow-lg rounded-xl" data-aos="fade-right">
+        <form class="space-y-4">
+          <div>
+            <label class="block font-semibold text-gray-700">Invitation Type</label>
+            <select class="w-full border border-pink-300 p-2 rounded">
+              <option>Video Invitation</option>
+              <option>Image Invitation</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-semibold text-gray-700">Theme</label>
+            <select class="w-full border border-pink-300 p-2 rounded">
+              <option>Royal Traditional</option>
+              <option>Minimal Floral</option>
+              <option>Modern & Elegant</option>
+              <option>South Indian</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-semibold text-gray-700">Names of Couple</label>
+            <input type="text" class="w-full border border-pink-300 p-2 rounded" placeholder="e.g., Rohan & Riya" />
+          </div>
+
+          <div>
+            <label class="block font-semibold text-gray-700">Date & Time</label>
+            <input type="text" class="w-full border border-pink-300 p-2 rounded" placeholder="e.g., 25 June 2025, 6:00 PM" />
+          </div>
+
+          <div>
+            <label class="block font-semibold text-gray-700">Venue</label>
+            <input type="text" class="w-full border border-pink-300 p-2 rounded" placeholder="e.g., Lotus Banquet Hall, Anand" />
+          </div>
+
+          <div>
+            <label class="block font-semibold text-gray-700">Select Music</label>
+            <select class="w-full border border-pink-300 p-2 rounded">
+              <option>Romantic Instrumental</option>
+              <option>Traditional Tabla Beats</option>
+              <option>Modern Cinematic</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full bg-pink-600 text-white py-3 rounded hover:bg-pink-700 transition">
+            Preview Invitation
+          </button>
+        </form>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="flex items-center justify-center bg-white shadow-xl p-6 rounded-xl" data-aos="fade-left">
+        <div class="text-center">
+          <p class="text-gray-500 mb-3">Live Preview</p>
+          <div class="border-2 border-dashed border-pink-300 rounded-lg p-10">
+            <p class="text-xl font-bold text-pink-700">Your Invitation Will Appear Here</p>
+            <p class="text-sm text-gray-600 mt-2">Dynamic preview based on your selections</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <p>© 2025 Dream Design. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

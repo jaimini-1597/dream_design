@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Design – Services Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <style>
+    .overlay {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .category-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .hidden-gallery {
+      display: none;
+    }
+
+    .show-gallery {
+      display: grid !important;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white font-sans">
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-3">
+        <img src="3bbb9e33-9c41-453f-a4b0-8d8af3d09645.png" alt="Dream Design Logo"
+          class="w-10 h-10 rounded-full animate-bounce">
+        <span class="text-2xl font-bold text-pink-600">Dream Design</span>
+      </div>
+      <nav class="space-x-5 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-pink-700">Home</a>
+        <a href="designer.html" class="text-pink-500">Designer</a>
+        <a href="gallery.html" class="hover:text-pink-500">Gallery</a>
+        <a href="videos.html" class="hover:text-pink-500">Videos</a>
+
+        <a href="pricing.html" class="hover:text-pink-500">Pricing</a>
+        <a href="about.html" class="hover:text-pink-500">About</a>
+        <a href="contact.html" class="hover:text-pink-500">Contact</a>
+
+        
+      </nav>
+    </div>
+  </header>
+
+  <section class="px-6 py-10">
+    <h2 class="text-5xl font-bold text-center text-pink-700 mb-6 hero-title">Our Work by Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div onclick="toggleGallery('video')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="2.png" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Video/Reel</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('story')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="3.png" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Story Design</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('poster')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="4.png" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Poster Design</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('invitation')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="5.png" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Video Invitation</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('card')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="6.png" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Invitation Cards</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('bio')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="7.png" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Bio-Data</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('resume')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="8.png" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Resume</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('brochure')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?brochure,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Brochures</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('logo')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?logo,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Logo</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('id')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?id,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">ID Card</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('business')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?business,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Businesscard</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('price')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?price,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Price Lists</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('certificate')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?certificate,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Certificate</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('letterhed')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?letterhed,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Letter Heds</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('banner')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?banner,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Banner</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('recipe')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?recipe,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Recipe Card</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('announcement')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?announcement,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Announcement</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('magazine')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?magazine,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Magazine Cover</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('flyer')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?flyer,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Flyers</span>
+        </div>
+      </div>
+
+      <div onclick="toggleGallery('book')"
+        class="relative cursor-pointer category-card rounded-xl overflow-hidden shadow-md group" data-aos="fade-up">
+        <img src="https://source.unsplash.com/600x400/?book,design" class="w-full h-56 object-cover" />
+        <div class="overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex items-center justify-center">
+          <span class="text-white text-lg font-semibold text-center">Book Cover</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery-video" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?video,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?video,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?video,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-story" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?story,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?story,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?story,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-poster"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?poster,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?poster,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?poster,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-invitation"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?invitation,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?invitation,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?invitation,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-card" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?card,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?card,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?card,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-bio" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?bio,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?bio,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?bio,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-resume"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?resume,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?resume,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?resume,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-brochure"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?brochure,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?brochure,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?brochure,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-logo" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?logo,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?logo,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?logo,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-id" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?id,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?id,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?id,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-business"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?business,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?business,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?business,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-price" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?price,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?price,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?price,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-certificate"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?certificate,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?certificate,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?certificate,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-letterhed"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?letterhed,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?letterhed,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?letterhed,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-banner"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?banner,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?banner,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?banner,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-recipe"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?recipe,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?recipe,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?recipe,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-announcement"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?announcement,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?announcement,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?announcement,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-magazine"
+    class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?magazine,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?magazine,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?magazine,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-flyer" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?flyer,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?flyer,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?flyer,sample3" class="rounded shadow" />
+  </section>
+
+  <section id="gallery-book" class="hidden-gallery max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 px-6 py-10">
+    <img src="https://source.unsplash.com/300x200/?book,sample1" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?book,sample2" class="rounded shadow" />
+    <img src="https://source.unsplash.com/300x200/?book,sample3" class="rounded shadow" />
+  </section>
+
+  </div>
+  </section>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    © 2025 Dream Design | All rights reserved
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleGallery(type) {
+      const allGalleries = document.querySelectorAll('[id^="gallery-"]');
+      allGalleries.forEach(g => g.classList.remove("show-gallery"));
+      const target = document.getElementById("gallery-" + type);
+      if (target) {
+        target.classList.add("show-gallery");
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Design - Wedding Invitation Creator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      
+      overflow-x: hidden;
+    }
+      .hero-title {
+        font-family: 'Great Vibes', cursive;
+      }
+    .floating-icons {
+      position: fixed;
+      right: 10px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="w-full min-h-screen flex flex-col justify-center items-center text-center px-4 relative">
+    
+    <h1 class="text-4xl md:text-6xl font-bold text-pink-700 hero-title">We Turn Your Love Into a Beautiful Post</h1>
+    <p class="mt-4 text-lg text-gray-700">Wedding | Engagement | Save the Date | Anniversary</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-6">
+      <a href="gallery.html" class="px-6 py-3 bg-pink-500 text-white rounded-xl shadow-lg hover:bg-pink-600 transition-all">View Gallery</a>
+      <a href="booking.html" class="px-6 py-3 bg-white border border-pink-500 text-pink-600 rounded-xl shadow-lg hover:bg-pink-50 transition-all">Book Now</a>
+    </div>
+    <!-- Decorative Animation -->
+    <div id="confetti" class="absolute inset-0 z-0 pointer-events-none"></div>
+  </section>
+
+  <!-- Floating Icons -->
+  <div class="floating-icons">
+    <a href="https://instagram.com/dream.design_____" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/fa314a/instagram-new.png" alt="Instagram" class="w-10 h-10" />
+    </a>
+    <a href="https://wa.me/919512979778" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" class="w-10 h-10" />
+    </a>
+  </div>
+
+  <script>
+    // Confetti Lottie Animation
+    var animation = lottie.loadAnimation({
+      container: document.getElementById('confetti'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets4.lottiefiles.com/packages/lf20_yg9pxc2c.json'
+    });
+  </script>
+</body>
+</html>

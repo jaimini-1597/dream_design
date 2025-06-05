@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Design – Wedding Video Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <style>
+    .modal {
+      display: none;
+    }
+    .modal.active {
+      display: flex;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-3">
+        <img src="3bbb9e33-9c41-453f-a4b0-8d8af3d09645.png" alt="Dream Design Logo"
+          class="w-10 h-10 rounded-full animate-bounce">
+        <span class="text-2xl font-bold text-pink-600">Dream Design</span>
+      </div>
+      <nav class="space-x-5 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-pink-700">Home</a>
+        <a href="designer.html" class="hover:text-pink-500">Designer</a>
+        <a href="gallery.html" class="hover:text-pink-500">Gallery</a>
+        <a href="videos.html" class="text-pink-500">Videos</a>
+
+        <a href="pricing.html" class="hover:text-pink-500">Pricing</a>
+        <a href="about.html" class="hover:text-pink-500">About</a>
+        <a href="contact.html" class="hover:text-pink-500">Contact</a>
+
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- Gallery Header -->
+  <section class="pt-32 pb-12 text-center bg-gradient-to-br from-pink-50 to-white" data-aos="fade-up">
+    <h2 class="text-5xl font-bold text-pink-700 mb-3 videos-title">Wedding Video Showcase</h2>
+    <p class="text-gray-600">Cinematic wedding moments edited by Dream Design</p>
+  </section>
+
+  <!-- Video Grid -->
+  <section class="px-4 md:px-20 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+    
+    <!-- Video Card -->
+    <div class="relative group cursor-pointer" onclick="openModal('video1')">
+      <img src="vjnjmj.png" class="rounded-lg shadow-lg transform group-hover:scale-105 transition" alt="Wedding Video">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-2xl opacity-0 group-hover:opacity-100 transition">▶ Play</div>
+    </div>
+
+    <div class="relative group cursor-pointer" onclick="openModal('video2')">
+      <img src="Orange Modern Apps Review Youtube Thumbnail  .png" class="rounded-lg shadow-lg transform group-hover:scale-105 transition" alt="Wedding Video">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-2xl opacity-0 group-hover:opacity-100 transition">▶ Play</div>
+    </div>
+
+    <div class="relative group cursor-pointer" onclick="openModal('video3')">
+      <img src="Beige Floral Happy Wedding A4 Landscape.png" height="200px" width="2200px" class="rounded-lg shadow-lg transform group-hover:scale-105 transition" alt="Wedding Video">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-2xl opacity-0 group-hover:opacity-100 transition">▶ Play</div>
+    </div>
+    
+    <!-- Add more videos as needed -->
+
+  </section>
+
+  <!-- Modals -->
+  <div id="video1" class="modal fixed inset-0 bg-black bg-opacity-80 justify-center items-center z-50">
+    <div class="bg-white p-4 rounded-lg relative max-w-2xl w-full">
+      <button onclick="closeModal('video1')" class="absolute top-2 right-2 text-xl font-bold text-gray-600 hover:text-pink-600">×</button>
+      <iframe class="w-full h-72 md:h-96" src="FINAL (2).mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div id="video2" class="modal fixed inset-0 bg-black bg-opacity-80 justify-center items-center z-50">
+    <div class="bg-white p-4 rounded-lg relative max-w-2xl w-full">
+      <button onclick="closeModal('video2')" class="absolute top-2 right-2 text-xl font-bold text-gray-600 hover:text-pink-600">×</button>
+      <iframe class="w-full h-72 md:h-96" src="https://www.youtube.com/embed/0Hkn-LSh7es" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div id="video3" class="modal fixed inset-0 bg-black bg-opacity-80 justify-center items-center z-50">
+    <div class="bg-white p-4 rounded-lg relative max-w-2xl w-full">
+      <button onclick="closeModal('video3')" class="absolute top-2 right-2 text-xl font-bold text-gray-600 hover:text-pink-600">×</button>
+      <iframe class="w-full h-72 md:h-96" src="https://www.youtube.com/embed/kXYiU_JCYtU" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <p>© 2025 Dream Design. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
