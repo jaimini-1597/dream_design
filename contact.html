@@ -16,26 +16,72 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script><link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <header class="sticky top-0 bg-white shadow z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <div class="flex items-center space-x-3">
-            <img src="3bbb9e33-9c41-453f-a4b0-8d8af3d09645.png" alt="Dream Design Logo"
-              class="w-10 h-10 rounded-full animate-bounce">
-            <span class="text-2xl font-bold text-pink-600">Dream Design</span>
-          </div>
-          <nav class="space-x-5 text-gray-700 font-medium">
-            <a href="index.html" class="hover:text-pink-700">Home</a>
-            <a href="designer.html" class="hover:text-pink-500">Designer</a>
-            <a href="gallery.html" class="hover:text-pink-500">Gallery</a>
-            <a href="videos.html" class="hover:text-pink-500">Videos</a>
-    
-            <a href="pricing.html" class="hover:text-pink-500">Pricing</a>
-            <a href="about.html" class="hover:text-pink-500">About</a>
-            <a href="contact.html" class="text-pink-500">Contact</a>
-          </nav>
-        </div>
-      </header>
+   
+ <!-- Responsive Navbar with Mobile Sidebar -->
+<header class="sticky top-0 bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <!-- Logo Section -->
+    <div class="flex items-center space-x-3">
+      <img src="3bbb9e33-9c41-453f-a4b0-8d8af3d09645.png" alt="Dream Design Logo"
+        class="w-10 h-10 rounded-full animate-bounce">
+      <span class="text-2xl font-bold text-pink-600">Dream Design</span>
+    </div>
 
+    <!-- Hamburger Icon -->
+    <button id="menu-toggle" class="block md:hidden text-pink-600 text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-5 text-gray-700 font-medium">
+      <a href="index.html" class="text-pink-700">Home</a>
+      <a href="designer.html" class="hover:text-pink-500">Designer</a>
+      <a href="gallery.html" class="hover:text-pink-500">Gallery</a>
+      <a href="videos.html" class="hover:text-pink-500">Videos</a>
+      <a href="pricing.html" class="hover:text-pink-500">Pricing</a>
+      <a href="about.html" class="hover:text-pink-500">About</a>
+      <a href="contact.html" class="hover:text-pink-500">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Sidebar -->
+  <div id="mobile-menu"
+    class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 md:hidden">
+    <div class="flex justify-between items-center p-4 border-b">
+      <span class="text-xl font-bold text-pink-600">Menu</span>
+      <button id="close-menu" class="text-2xl text-pink-600">×</button>
+    </div>
+    <nav class="flex flex-col p-4 space-y-4 text-gray-700 font-medium">
+      <a href="index.html" class="text-pink-700">Home</a>
+      <a href="designer.html" class="hover:text-pink-500">Designer</a>
+      <a href="gallery.html" class="hover:text-pink-500">Gallery</a>
+      <a href="videos.html" class="hover:text-pink-500">Videos</a>
+      <a href="pricing.html" class="hover:text-pink-500">Pricing</a>
+      <a href="about.html" class="hover:text-pink-500">About</a>
+      <a href="contact.html" class="hover:text-pink-500">Contact</a>
+    </nav>
+  </div>
+</header>
+<style>
+  /* Smooth Sidebar Animation */
+#mobile-menu {
+  transition: transform 0.3s ease-in-out;
+}
+
+</style>
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+  });
+</script>
   <section class="contact-section">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
